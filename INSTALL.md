@@ -271,8 +271,8 @@ sudo systemctl start scholarmind
 
 If you encounter issues:
 1. Check logs: `~/.scholarmind/logs/`
-2. GitHub Issues: https://github.com/yourusername/scholarmind/issues
-3. Email: support@example.com
+2. GitHub Issues: https://github.com/Tsuda14/scholarmind/issues
+3. Email: tsudashou14@gmail.com
 
 ---
 
