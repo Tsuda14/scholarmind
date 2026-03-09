@@ -7,11 +7,11 @@ setup(
     name="scholarmind",
     version="1.0.0",
     author="tsuda",
-    author_email="tsuda@example.com",
+    author_email="tsudashou14@gmail.com",
     description="Academic Research Automation Tool | 学术研究自动化助手",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/scholarmind",
+    url="https://github.com/Tsuda14/scholarmind",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
