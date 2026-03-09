@@ -28,7 +28,7 @@ Automate your academic research workflow with AI-powered paper search, download,
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/scholarmind.git
+git clone https://github.com/Tsuda14/scholarmind.git
 cd scholarmind
 
 # Create virtual environment
@@ -206,16 +206,15 @@ If you find ScholarMind useful, consider supporting its development:
 
 - ⭐ Star this repository
 - 🐛 Report bugs and suggest features
-- 💖 [Sponsor on GitHub](https://github.com/sponsors/YOUR_USERNAME)
-- ☕ [Buy me a coffee](https://ko-fi.com/YOUR_USERNAME)
+- 💖 [Sponsor on GitHub](https://github.com/sponsors/Tsuda14)
+- ☕ [Buy me a coffee](https://ko-fi.com/Tsuda14)
 
 ---
 
 ## 📞 Contact
 
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/scholarmind/issues)
-- **Email**: your-email@example.com
-- **Twitter**: [@your_handle](https://twitter.com/your_handle)
+- **Issues**: [GitHub Issues](https://github.com/Tsuda14/scholarmind/issues)
+- **Email**: tsudashou14@gmail.com
 
 ---
 
@@ -237,14 +236,14 @@ If you find ScholarMind useful, consider supporting its development:
 
 ## 📈 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/scholarmind?style=social)
-![GitHub forks](https://img.shields.io/github/forks/YOUR_USERNAME/scholarmind?style=social)
-![GitHub issues](https://img.shields.io/github/issues/YOUR_USERNAME/scholarmind)
-![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/scholarmind)
+![GitHub stars](https://img.shields.io/github/stars/Tsuda14/scholarmind?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Tsuda14/scholarmind?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Tsuda14/scholarmind)
+![GitHub license](https://img.shields.io/github/license/Tsuda14/scholarmind)
 
 ---
 
-**Made with ❤️ by [tsuda](https://github.com/YOUR_USERNAME)**
+**Made with ❤️ by [tsuda](https://github.com/Tsuda14)**
 
 *Automating research, one paper at a time.*
 
