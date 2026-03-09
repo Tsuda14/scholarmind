@@ -1,52 +1,39 @@
 # ScholarMind 🦞
 
-**Academic Research Automation Tool | 学术研究自动化助手**
+**Academic Research Automation Tool**
 
-Version 1.0.0
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-❤-red.svg)](https://github.com/sponsors/YOUR_USERNAME)
 
----
-
-## 🎯 What is ScholarMind?
-
-ScholarMind is a powerful command-line tool that automates academic research workflows:
-
-1. **🔍 Smart Search** - AI-optimized keyword generation + multi-source search
-2. **📥 Auto Download** - Download papers from Google Scholar, PubMed, arXiv, Sci-Hub
-3. **🧠 AI Analysis** - Extract key findings, methods, and data
-4. **📊 Report Generation** - Generate bilingual (EN/ZH) research reports
-
-**ScholarMind 是什么？**
-
-ScholarMind 是一个强大的命令行工具，可自动化学术研究流程：
-
-1. **🔍 智能搜索** - AI 优化关键词 + 多源搜索
-2. **📥 自动下载** - 从 Google Scholar、PubMed、arXiv、Sci-Hub 下载论文
-3. **🧠 AI 分析** - 提取关键发现、方法和数据
-4. **📊 报告生成** - 生成中英双语研究报告
+Automate your academic research workflow with AI-powered paper search, download, and analysis.
 
 ---
 
-## ✨ Features | 功能特性
+## 🎯 Features
 
-- ✅ **Multi-source search** | 多源搜索 (Google Scholar, PubMed, arXiv)
-- ✅ **Automatic download** | 自动下载 (Sci-Hub, Unpaywall)
-- ✅ **PDF parsing** | PDF 解析
-- ✅ **AI-powered analysis** | AI 驱动分析
-- ✅ **Bilingual reports** | 双语报告 (EN/ZH)
-- ✅ **Multiple scenarios** | 多场景支持 (竞品调研/文献综述/监管准备)
-- ✅ **Interactive mode** | 交互模式
-- ✅ **Configurable AI models** | 可配置 AI 模型
+- **🔍 Multi-Source Search** - Search papers from Google Scholar, PubMed, and arXiv simultaneously
+- **📥 Automatic Download** - Download PDFs from Sci-Hub, Unpaywall, and arXiv
+- **🌐 Auto Translation** - Automatically translates Chinese queries to English for broader search
+- **🧠 AI-Powered Analysis** - Extract key findings, methods, and data from papers
+- **📊 Bilingual Reports** - Generate comprehensive reports in English and Chinese
+- **🎯 Scenario-Based** - Optimized workflows for competitor research, literature review, and regulatory preparation
+- **💻 CLI & Interactive** - Both command-line and interactive modes available
 
 ---
 
-## 🚀 Quick Start | 快速开始
+## 🚀 Quick Start
 
-### Installation | 安装
+### Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/scholarmind.git
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/scholarmind.git
 cd scholarmind
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -55,44 +42,53 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### Basic Usage | 基本使用
+### Basic Usage
 
 ```bash
-# Simple search
-scholarmind search "biocompatibility testing"
-
-# Interactive mode
+# Interactive mode (recommended for beginners)
 scholarmind interactive
 
-# Custom scenario
-scholarmind search "心脏支架" --scenario research --max-papers 20 --output report.md
+# Command-line mode
+scholarmind search "biocompatibility testing" --max-papers 10
+
+# Advanced usage
+scholarmind search "cardiac stent" \
+  --scenario research \
+  --max-papers 20 \
+  --language both \
+  --output report.md
 ```
 
 ---
 
-## 📖 Usage Examples | 使用示例
+## 📖 Documentation
 
-### Example 1: Competitor Research | 竞品调研
+- **[Installation Guide](INSTALL.md)** - Detailed installation instructions for CentOS 10
+- **[Quick Start](QUICKSTART.md)** - Get started in 5 minutes
+- **[Examples](EXAMPLES.md)** - Comprehensive usage examples
+- **[Changelog](CHANGELOG.md)** - Version history and updates
 
+---
+
+## 💡 Use Cases
+
+### Competitor Research
 ```bash
 scholarmind search "medical device biocompatibility" \
   --scenario research \
   --max-papers 15 \
-  --language both \
   --output competitor_analysis.md
 ```
 
-### Example 2: Literature Review | 文献综述
-
+### Literature Review
 ```bash
-scholarmind search "cardiac stent clinical trials" \
+scholarmind search "tissue engineering scaffold" \
   --scenario review \
   --max-papers 30 \
   --output literature_review.md
 ```
 
-### Example 3: Regulatory Preparation | 监管准备
-
+### Regulatory Preparation
 ```bash
 scholarmind search "FDA 510k medical device" \
   --scenario regulatory \
@@ -102,22 +98,22 @@ scholarmind search "FDA 510k medical device" \
 
 ---
 
-## 🛠️ Configuration | 配置
+## 🛠️ Configuration
 
-### Configure AI Model | 配置 AI 模型
+### Configure AI Model (Optional)
 
 ```bash
 # OpenAI
-scholarmind config --model openai --api-key sk-xxx
+scholarmind config --model openai --api-key sk-your-key
 
 # Claude
-scholarmind config --model claude --api-key sk-xxx
+scholarmind config --model claude --api-key sk-your-key
 
 # Local model (Ollama, etc.)
 scholarmind config --model local --endpoint http://localhost:11434
 ```
 
-### View Configuration | 查看配置
+### View Configuration
 
 ```bash
 scholarmind config
@@ -125,102 +121,135 @@ scholarmind config
 
 ---
 
-## 📋 Command Reference | 命令参考
+## 📊 How It Works
 
-### `scholarmind search`
+```
+User Input → Auto Translation → Multi-Source Search → PDF Download → AI Analysis → Report Generation
+```
 
-Search and analyze papers | 搜索并分析论文
-
-**Options:**
-- `--scenario` - Research scenario (research/review/regulatory/custom)
-- `--max-papers` - Maximum papers to download (default: 10)
-- `--output` - Output filename (default: report.md)
-- `--language` - Language preference (en/zh/both, default: both)
-- `--sources` - Data sources (comma-separated, default: all)
-
-### `scholarmind interactive`
-
-Interactive mode with guided prompts | 交互模式
-
-### `scholarmind config`
-
-Configure AI model and settings | 配置 AI 模型和设置
+1. **Search**: Queries Google Scholar, PubMed, and arXiv
+2. **Download**: Attempts to download PDFs from multiple sources
+3. **Analyze**: Extracts metadata, key findings, and data
+4. **Report**: Generates bilingual Markdown/HTML reports
 
 ---
 
-## 🗂️ Project Structure | 项目结构
+## 🌟 Key Features Explained
 
+### Auto Translation
+Input Chinese keywords? ScholarMind automatically translates to English and searches both languages:
+```bash
+scholarmind search "生物相容性"
+# Automatically searches both "生物相容性" and "biocompatibility"
 ```
-scholarmind/
-├── scholarmind/
-│   ├── __init__.py
-│   ├── cli.py          # Command-line interface
-│   ├── search.py       # Paper search
-│   ├── download.py     # Paper download
-│   ├── analyze.py      # Paper analysis
-│   ├── report.py       # Report generation
-│   └── config.py       # Configuration
-├── requirements.txt
-├── setup.py
-├── README.md
-└── INSTALL.md
+
+### Scenario-Based Analysis
+Different scenarios extract different information:
+- **Research**: Clinical data, efficacy, safety metrics
+- **Review**: Methods, conclusions, trends
+- **Regulatory**: FDA/ISO standards, compliance requirements
+
+### File Organization
+All outputs are organized in `~/.scholarmind/`:
+```
+~/.scholarmind/
+├── config.json          # User configuration
+├── papers/              # Downloaded PDFs
+└── reports/             # Generated reports
 ```
 
 ---
 
-## ⚠️ Legal Disclaimer | 法律声明
+## ⚠️ Legal Disclaimer
 
-**English:**
-- Sci-Hub may violate copyright laws in some jurisdictions
-- This tool is for personal research and educational purposes only
-- Users are responsible for compliance with local laws
-- Always prefer legal open access sources (Unpaywall, arXiv, etc.)
+**Important**: This tool uses Sci-Hub for PDF downloads, which may violate copyright laws in some jurisdictions. 
 
-**中文：**
-- Sci-Hub 在某些地区可能违反版权法
-- 本工具仅供个人研究和教育用途
-- 用户需自行遵守当地法律
-- 请优先使用合法开放获取资源（Unpaywall、arXiv 等）
+- ✅ Use for personal research and educational purposes only
+- ✅ Prefer legal open access sources (Unpaywall, arXiv)
+- ⚠️ Users are responsible for compliance with local laws
+- ⚠️ Sci-Hub access may require VPN in some regions
 
 ---
 
-## 🤝 Contributing | 贡献
+## 🤝 Contributing
 
-Contributions are welcome! | 欢迎贡献！
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📄 License | 许可证
+## 📄 License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments | 致谢
+## 🙏 Acknowledgments
 
-- Google Scholar
-- PubMed/NCBI
-- arXiv
-- Sci-Hub
-- Unpaywall
+- [Google Scholar](https://scholar.google.com/)
+- [PubMed/NCBI](https://pubmed.ncbi.nlm.nih.gov/)
+- [arXiv](https://arxiv.org/)
+- [Sci-Hub](https://sci-hub.se/)
+- [Unpaywall](https://unpaywall.org/)
 - All open science initiatives
 
 ---
 
-## 📞 Support | 支持
+## 💰 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/scholarmind/issues)
-- **Email:** support@example.com
-- **Sponsor:** [GitHub Sponsors](https://github.com/sponsors/yourusername)
+If you find ScholarMind useful, consider supporting its development:
+
+- ⭐ Star this repository
+- 🐛 Report bugs and suggest features
+- 💖 [Sponsor on GitHub](https://github.com/sponsors/YOUR_USERNAME)
+- ☕ [Buy me a coffee](https://ko-fi.com/YOUR_USERNAME)
 
 ---
 
-**Made with ❤️ by tsuda & 龙虾 🦞**
+## 📞 Contact
 
-*Automating research, one paper at a time | 自动化研究，一次一篇论文*
+- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/scholarmind/issues)
+- **Email**: your-email@example.com
+- **Twitter**: [@your_handle](https://twitter.com/your_handle)
+
+---
+
+## 🗺️ Roadmap
+
+### v1.1.0 (Planned)
+- [ ] Web interface
+- [ ] Batch processing
+- [ ] Citation network analysis
+- [ ] Figure/table extraction
+
+### v1.2.0 (Future)
+- [ ] Team collaboration features
+- [ ] Cloud sync
+- [ ] Mobile app
+- [ ] Advanced visualization
+
+---
+
+## 📈 Stats
+
+![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/scholarmind?style=social)
+![GitHub forks](https://img.shields.io/github/forks/YOUR_USERNAME/scholarmind?style=social)
+![GitHub issues](https://img.shields.io/github/issues/YOUR_USERNAME/scholarmind)
+![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/scholarmind)
+
+---
+
+**Made with ❤️ by [tsuda](https://github.com/YOUR_USERNAME)**
+
+*Automating research, one paper at a time.*
+
+---
+
+## 🌐 中文文档
+
+[中文版 README](README_CN.md) | [安装指南](INSTALL.md) | [快速开始](QUICKSTART.md)
