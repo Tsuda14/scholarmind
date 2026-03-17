@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-❤-red.svg)](https://github.com/sponsors/YOUR_USERNAME)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-❤-red.svg)](https://github.com/sponsors/Tsuda14)
 
 Automate your academic research workflow with AI-powered paper search, download, and analysis.
 
